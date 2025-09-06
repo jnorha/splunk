@@ -1,0 +1,1 @@
+inital commit with some notes
