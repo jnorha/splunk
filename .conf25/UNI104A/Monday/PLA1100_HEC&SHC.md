@@ -19,6 +19,34 @@ Turning off search head cluster nodes when you don't need them (This is my prest
 Turning off search heads is very hard. Really only works in a fully automated environment where you are hyper aware of the needs and usage. They automate out reports every 15 minutes which provide everything the "searchers" need from the data collection. 
 <br>
 Have to have search head captain to control the cluster. Code is available to enable the lifecycle hook. 
+<br>
+Just Ad-Hoc search head cluster. 
+<br>
+
+#### Programming HEC API Keys
+Encode information about the client within the source of the token. 
+<br>
+Token re-use for new code deploys
+
+* metrics.log for tracking topN usage
+
+#### Kill and Indexer
+
+<br>
+A busy token can cause parsing errors and increased indexer usage. Encoding the token source allows you to deep dive into the boundary use case of the token and where you may need to spin up more or mitigate ingest. 
+<br>
+i3en in AWS for SmartStore. Warm storage with Cache searchable data. Don't use spinning rest, use NVME for hot & cache. 
+<br>
+I/O wait and local cached config are problems through restarts. 
+<br>
+Indexer age check, must be different sizes, show slow disk write speeds. <br>
+Code available to have ansible run through and perform actions against these indexers.
+<br>
+Offlines node, terminates node, persists EBS disk that opt/splunk.
+<br>
+When it builds a new node it finds unattached /opt/splun kEBS volume and mounts it on the newly formed indexer. Very cool. Splunk just thinks it was restarted then and not rebuilt. 
+<br>
+This can fix indexing Queue's filling and TCP port closures. 
 
 #### For us
 
